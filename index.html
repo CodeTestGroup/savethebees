@@ -6,26 +6,40 @@
     <title>Save The Bees</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Cartoony font */
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #ffffc0; /* Light yellow background */
         }
         header {
-            background-image: url('bee_backround.jpg'); /* Replace 'bee_image.jpg' with the path to your bee image */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
+            background-color: #FFD700; /* Gold background for header */
+            color: #000; /* Black text */
             text-align: center;
-            padding: 100px 0;
+            padding: 50px 0;
         }
         h1 {
             font-size: 3em;
             margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        h1 svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #000;
+            stroke-width: 4;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 5s forwards;
         }
         p {
             font-size: 1.2em;
             margin-bottom: 30px;
+            line-height: 1.6;
         }
         a {
             color: #007bff;
@@ -63,16 +77,24 @@
             bottom: 0;
             width: 100%;
         }
+        
+        /* Animation for drawing SVG */
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
     </nav>
     <header>
-        <h1>Save The Bees</h1>
+        <h1>
+            Save the bees
+        </h1>
     </header>
     <section id="more">
         <div class="container">
@@ -87,17 +109,9 @@
             <p>Save The Bees is a non-profit organization dedicated to raising awareness about the importance of bees and promoting actions to protect and conserve bee populations. Our mission is to educate the public about the vital role bees play in ecosystems and agriculture, and to inspire individuals and communities to take action to safeguard bees and their habitats.</p>
         </div>
     </section>
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>For inquiries, partnerships, or to learn more about our initiatives, please contact us:</p>
-            <p>Email: info@savethebees.org</p>
-            <p>Phone: 1-800-SAVE-BEE</p>
-            <p>Address: 123 Beehive Street, Bee City, BUZZ123</p>
-        </div>
-    </section>
+  
     <footer>
-        <p>&copy; 2024 Save The Bees. All rights reserved.</p>
+        <p>&copy; 2024 CodeTestGroup. All rights reserved.</p>
     </footer>
 </body>
 </html>
